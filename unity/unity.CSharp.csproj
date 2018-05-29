@@ -96,6 +96,8 @@
     <Compile Include="Assets\~Asteroids\Scrpits\Movement.cs" />
     <Compile Include="Assets\~Asteroids\Scrpits\Shooting.cs" />
     <Compile Include="Assets\~GoneHome\Scripts\Player.cs" />
+    <Compile Include="Assets\~Minesweeper\Scripts\Grid.cs" />
+    <Compile Include="Assets\~Minesweeper\Scripts\Tile.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Tiled2Unity\Imported\Level_01.tiled2unity.xml" />
