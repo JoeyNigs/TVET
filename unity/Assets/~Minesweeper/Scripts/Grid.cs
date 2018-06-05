@@ -5,12 +5,13 @@ using UnityEngine;
 
 namespace Minesweeper
 {
-public class Grid : MonoBehaviour {
+    public class Grid : MonoBehaviour
+    {
         public GameObject tilePrefab;
         public int width = 10, height = 10;
         public float spacing = .155f;
 
-        private Tile[,] titles;
+        private Tile[,] tiles;
 
         Tile SpawnTile(Vector3 pos)
         {
@@ -20,12 +21,12 @@ public class Grid : MonoBehaviour {
             return currentTile;
         }
 
-    void GenerateTitle ()
+        void GenerateTitle()
         {
             tiles = new Tile[width, height];
             for (int x = 0; x < width; x++)
             {
-                for (int y = 0; y < heigth; x++)
+                for (int y = 0; y < height; x++)
                 {
                     Vector2 halfSize = new Vector2(width * 0.5f, height * 0.5f);
                     Vector2 pos = new Vector2(x - halfSize.x, y - halfSize.y);
@@ -35,8 +36,15 @@ public class Grid : MonoBehaviour {
                     tile.transform.SetParent(transform);
                     tile.x = x;
                     tile.y = y;
-                }
-        }
+                    tiles[x, y] = tile;
 
-}
+                }
+            }
+
+        }
+        void Start()
+        {
+
+        }
+    }
 }
